@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "dir2path"
 version = "0.1.0"
-description = ""
+description = "Add current directory to your PATH"
 authors = ["Josh Burns <joshyburnss@gmail.com>"]
 readme = "README.md"
 
