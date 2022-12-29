@@ -8,11 +8,10 @@ supported_shells = {
 
 def run():
     dirp = os.getcwd()
-    system_shell_var = os.environ['SHELL'].split("/")
-    shell_name = system_shell_var[-1]
-    print(shell_name)
+    shell_name = os.environ['SHELL'].split("/")[-1]
     if shell_name in supported_shells:
-        print(f"appending {dirp} to {shell_name}")
+        shell_config = supported_shells[shell_name]
+        path_append_script = f"export PATH=\"$PATH:{dirp}\"\n"
         quit()
     else:
         print(f"Unsupported shell: {system_shell_var}")
